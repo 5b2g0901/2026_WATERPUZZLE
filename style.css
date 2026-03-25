@@ -1,5 +1,28 @@
 body {
-    background-color: rgb(250, 227, 246);
+    background-color: rgb(250, 240, 248);
     font-family: Arial, Helvetica, sans-serif;
     margin: 50px;
+}
+
+.game-area {
+    background-color: rgb(205, 221, 245);
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#game-info {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    background-color: rgb(185, 199, 236);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 50px;
+}
+
+#game-board {
+    background-color: rgb(186, 219, 235);
+    border: 1px dashed black;
 }
