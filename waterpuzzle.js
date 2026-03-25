@@ -4,12 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const levelSelect = document.getElementById('level-select');
 
     const tubes = [];
+    let levelCount = 1;
+
 
     levelSelect.addEventListener('change', (event) => {
-        const selectLevel = parseInt(event.target.value);
-        alert('第' + selectLevel + '關');
+        levelCount = parseInt(event.target.value);
+        document.getElementById('level-count').textContent = levelCount;
     });
+
     playButton.addEventListener('click', () => {
-        alert('開始遊戲');
+        tubes.length = 0;
+        createTubes();
     });
+
+    function createTubes() {
+        //依照選擇的關卡來產生試管
+        gameBoard.innerHTML = "";
+
+        for (let i = 0; i < levelCount + 1; i++) {
+            const tube = document.createElement('div');
+            tube.classList.add('tube');
+            gameBoard.appendChild(tube);
+            tubes.push(tube);
+
+        }
+    }
 });
